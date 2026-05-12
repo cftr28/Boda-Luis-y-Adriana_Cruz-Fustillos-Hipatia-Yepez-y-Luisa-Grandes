@@ -199,12 +199,24 @@ body::before {
         /* --- SECCIÓN 3: GALERÍA --- */
         .galeria-section { padding: 40px 10px; text-align: center; }
         .galeria-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    /* REDUCIMOS el ancho máximo de 700px a algo que quepa en el marco */
+    max-width: 85%; 
+    /* Aseguramos que esté centrada y no toque los bordes */
+    margin: 0 auto;
+    padding: 0 10px; 
+}
+
+/* Y ajustamos el comportamiento en móviles */
+@media (max-width: 500px) {
+    .galeria-grid { 
+        grid-template-columns: repeat(2, 1fr);
+        /* En celulares, un 80% suele ser el tamaño ideal para no tocar el marco dorado */
+        max-width: 80%; 
+    }
+}
         .galeria-item { 
             aspect-ratio: 1 / 1;
             overflow: hidden; 
@@ -468,7 +480,7 @@ body::before {
     </div>
 <div class="tarjetas-container reveal">
     <div class="tarjeta-info tarjeta-pases">
-        <img src="https://cdn-icons-png.flaticon.com/512/3067/3067451.png" style="width:70px; margin-bottom: 10px; filter: sepia(0.5);">
+        <img src="PARTY.png" style="width:70px; margin-bottom: 10px; filter: sepia(0.5);">
         <h2 class="titulo-script">Invitación Especial</h2>
         <div class="cuadro-pases">
             <p class="nombre-invitado">Luis Gerardo Yanchapaxi y Nelly Susana Gomez</p>
