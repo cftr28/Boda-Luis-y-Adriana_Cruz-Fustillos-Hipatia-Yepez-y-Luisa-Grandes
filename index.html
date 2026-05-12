@@ -156,18 +156,24 @@ body::before {
         }
 
         .countdown-container {
-            border: 1px solid #b08d57;
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap; 
-            gap: 10px;
-            padding: 20px 15px;
-            margin-bottom: 50px;
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(3px);
-            max-width: 65%;
-        }
+    border: 1px solid #b08d57;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    /* CAMBIO 1: Usa 'nowrap' para que los 4 números siempre estén en la misma línea */
+    flex-wrap: nowrap; 
+    /* CAMBIO 2: Reduce el gap a 5px para que estén más pegaditos */
+    gap: 5px;
+    /* CAMBIO 3: Reduce el padding para que el cuadro sea menos alto */
+    padding: 10px 5px; 
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(3px);
+    /* CAMBIO 4: Pon un max-width fijo en píxeles (ej. 260px) para que no se estire de más */
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
         .count-item { display: flex; flex-direction: column; align-items: center; min-width: 55px; }
         .count-number { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; color: #b08d57; font-weight: 300; }
